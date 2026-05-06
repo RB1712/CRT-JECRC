@@ -1,0 +1,66 @@
+//Program-2
+
+#include <iostream>
+using namespace std;
+
+void coffeeOrder(int coffee){
+    int orderValue, Discount;
+    orderValue=100*coffee;
+    Discount=orderValue*10/100;
+    cout<<"Your bill after discount is "<<orderValue-Discount<<"\n";
+}
+
+int main(){
+    int coffee;
+    cout<<"How many cups of coffee, you would like to order(INR 100/cup? ";
+    cin>>coffee;
+    
+    coffeeOrder(coffee);
+    return 0;
+}
+
+//Program
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int a=10;
+    int b=20;
+    int c;
+    cout<<"A: "<<a<<"B: "<<b;
+    int *tempA = &a;
+    int *tempB = &b;
+    
+    cout<<"\n";
+    
+    c=*tempA;
+    a=*tempB;
+    b=c;
+    cout<<"After swapping: \n"<<"A:"<<a<<" B: "<<b;
+    
+}
+
+//Program
+
+#include <iostream>
+using namespace std;
+
+class student{
+public:
+    int age;
+    string name;
+
+void introduce(){
+    cout<<"Hi there, this person name is "<< name <<" and his age is "<< age << "\n";}
+};
+
+int main(){
+    student s1, s2;
+    s1.name="Rajat";
+    s1.age=20;
+    s2.name="Rajeev";
+    s2.age=23;
+    s1.introduce();
+    s2.introduce();
+}
