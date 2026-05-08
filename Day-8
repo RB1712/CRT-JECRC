@@ -1,0 +1,128 @@
+//Program
+
+#include <iostream>
+using namespace std;
+
+class vehicle{
+public:
+    void start(){
+        cout<<"vehicle starts!"<<"\n";
+    }
+};
+
+class car : public vehicle{
+public:
+    void drive(){
+        cout<<"Car is running!"<<"\n";
+    }
+};
+
+class speedo : public car{
+public:
+    void speed(){
+        cout<<"car is running at 60km/h"<<"\n";
+    }
+}
+
+int main(){
+    speedo obj1;
+    
+    
+}
+
+//Program
+
+#include <iostream>
+using namespace std;
+
+class vehicle{
+public:
+    void start(){
+        cout<<"vehicle starts!"<<"\n";
+    }
+};
+
+class car : public vehicle{
+public:
+    void drive(){
+        cout<<"Car is running!"<<"\n";
+    }
+};
+
+class bike : public vehicle{
+public:
+    void drive(){
+        cout<<"bike is running"<<"\n";
+    }
+};
+
+int main(){
+    car obj1;
+    bike obj2;
+    obj2.start();
+    obj2.drive();
+    obj1.start();
+    obj1.drive();
+    
+}
+
+//Program
+
+#include <iostream>
+using namespace std;
+
+class parent1{
+public:
+    void paiseDo(){
+        cout<<"Mummy paise de do goomne jana hai";
+        
+    }
+};
+
+class parent2{
+public:
+    void paiseDo(){
+        cout<<"Papa paise de do books laani hai";
+    }
+};
+
+class child:public parent1, public parent2{
+    
+};
+
+int main(){
+    child c;
+    c.paiseDo();
+    
+}
+
+//Program
+
+#include <iostream>
+using namespace std;
+
+class A{
+public:
+    void print(){
+        cout<<"Hi there";
+    }
+};
+
+
+class B:virtual Public A {
+    //NO LOGIC
+};
+
+class C:virtual Public A {
+    //NO LOGIC
+};
+
+class D: public B , public C {
+    //NO LOGIC
+};
+
+int main(){
+    D obj1;
+    obj1.print();
+    
+}
